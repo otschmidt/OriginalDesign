@@ -1,6 +1,8 @@
 int eyeX = 180;
 int eyeSize = 20;
-
+int backColorR = 255;
+int backColorG = 0;
+int backColorB = 0;
 
 void setup()
 {
@@ -8,12 +10,18 @@ void setup()
 }
 void draw()
 {
-background(255);
+background(backColorR,backColorG,backColorB);
+body();
 face();
 eyes();
 mouth();
+
 //eyeX = eyeX + 1;
 
+//Background Change
+
+
+//Eye Size Movement
 eyeSize = eyeSize + 1;
 if (eyeSize>50)
 {
@@ -42,5 +50,5 @@ ellipse(200,250,40,40);
 
 void body()
 {
-	rect(200,100,100,100);
+	rect(150,200,100,300);
 }
