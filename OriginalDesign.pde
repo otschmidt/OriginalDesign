@@ -10,17 +10,33 @@ void setup()
 }
 void draw()
 {
-background(backColorR,backColorG,backColorB);
+//background(backColorR,backColorG,backColorB);
+background(255);
 body();
 face();
 eyes();
 mouth();
+textSize(50);
+text("Woah",150,100);
 
 //eyeX = eyeX + 1;
 
 //Background Change
-
-
+backColorB = backColorB + 50;
+backColorG = backColorG + 50;
+backColorR = backColorR - 50;
+if (backColorB>225)
+{
+	backColorB = 0;
+}
+if (backColorG>225)
+{
+	backColorG = 0;
+}
+if (backColorR<50)
+{
+	backColorR = 255;
+}
 //Eye Size Movement
 eyeSize = eyeSize + 1;
 if (eyeSize>50)
@@ -35,7 +51,7 @@ ellipse(200,200,150,150);
 }
 void eyes()
 {
-fill(255,255,255);
+fill(backColorR,backColorG,backColorB);
 ellipse(180,180,eyeSize,eyeSize);
 ellipse(220,180,eyeSize,eyeSize);
 fill(0,0,0);
