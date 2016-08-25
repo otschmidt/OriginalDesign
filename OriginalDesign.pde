@@ -10,8 +10,8 @@ void setup()
 }
 void draw()
 {
-//background(backColorR,backColorG,backColorB);
-background(255);
+background(backColorR,backColorG,backColorB);
+//background(255);
 body();
 face();
 eyes();
