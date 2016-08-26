@@ -3,6 +3,7 @@ int eyeSize = 20;
 int backColorR = 255;
 int backColorG = 0;
 int backColorB = 0;
+float rot = 0;
 
 void setup()
 {
@@ -11,6 +12,8 @@ void setup()
 void draw()
 {
 background(backColorR,backColorG,backColorB);
+translate(80,80);
+rotate(rot);
 //background(255);
 body();
 face();
@@ -19,12 +22,11 @@ mouth();
 textSize(50);
 text("Woah",150,100);
 
-//eyeX = eyeX + 1;
 
 //Background Change
-backColorB = backColorB + 50;
-backColorG = backColorG + 50;
-backColorR = backColorR - 50;
+backColorB = backColorB + 25;
+backColorG = backColorG + 25;
+backColorR = backColorR - 10;
 if (backColorB>225)
 {
 	backColorB = 0;
@@ -43,6 +45,11 @@ if (eyeSize>50)
 {
 	eyeSize = 20;
 }
+
+//Roation
+
+
+rot = rot+0.05;
 }
 void face()
 { 
